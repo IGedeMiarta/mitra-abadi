@@ -93,7 +93,8 @@
                 <input type="hidden" name="amount" id="amount" value="{{ $total }}">
             </ul>
             <div class="cart-submit">
-                <a href="#" class="cart-submit-btn" onclick="submitForm()"
+                <a href="#" class="cart-submit-btn disabled"
+                    onclick=" @if ($total <= 0) return false;  @else  submitForm() @endif"
                     style="@if ($total <= 0) background-color: #9EB8D9; @else background-color: #2B3499; @endif">Checkout</a>
                 {{-- <button type="submit" class="cart-submit-btn" target="_blank"
                     style="@if ($total <= 0) background-color: #9EB8D9; @else background-color: #2B3499; @endif">Checkout</button> --}}
