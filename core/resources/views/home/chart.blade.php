@@ -123,6 +123,10 @@
 
                 // Submit the form in the new tab
                 $(newTab.document.body).find('#cartForm').submit();
+
+                setTimeout(function() {
+                    window.open('', '_self').location.reload(true); // Reload the last tab
+                }, 2000);
             } else {
                 // Handle the case where the new tab couldn't be opened
                 alert('Unable to open a new tab. Please check your browser settings.');
