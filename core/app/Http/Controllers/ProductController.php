@@ -89,7 +89,7 @@ class ProductController extends Controller
                 'start_stock'   => 0,
                 'end_stock'     => intval(preg_replace('/[^\d.]/', '', $request->stock)),
                 'trx_by'        => auth()->user()->id,
-                'notes'         => 'Create product & first stock',
+                'note'         => 'Create product & first stock',
             ]);
             DB::commit();
             return redirect()->back()->with('success','Product Created');
